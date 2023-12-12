@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles2.css">
+  <title>Car Rental Booking</title>
+</head>
+<body>
+
+  <header>
+    <h1>Car Rental Booking</h1>
+  </header>
+
+  <section id="booking" class="form-section">
+    <h2>Booking Form</h2>
+    <form action="process-booking.php" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="aadhar">Aadhar Number:</label>
+      <input type="text" id="aadhar" name="aadhar" required>
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="4" required></textarea>
+
+      <label for="carModel">Car Model:</label>
+      <select id="carModel" name="carModel" required>
+        <option value="sedan">Sedan - Rs50/day</option>
+        <option value="suv">SUV - Rs70/day</option>
+        <option value="convertible">Convertible - Rs80/day</option>
+        <option value="hatchback">Hatchback - Rs45/day</option>
+        <option value="luxury">Luxury - Rs100/day</option>
+        <!-- Add more options as needed -->
+      </select>
+
+      <input type="submit" value="Submit Booking">
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Car Rental</p>
+  </footer>
+
+</body>
+</html>

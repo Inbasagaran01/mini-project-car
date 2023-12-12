@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      margin: 0;
+    }
+
+    .corner-image {
+      position: fixed;
+      width: 300px; /* Adjust the width as needed */
+      height: auto; /* Maintain aspect ratio */
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
+
+    .form-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+  </style>
+  <title>Car Rental</title>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      showSection('booking'); // Show the booking section by default
+
+      document.querySelectorAll('nav a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const sectionId = this.getAttribute('href').substring(1);
+          showSection(sectionId);
+        });
+      });
+    });
+
+    function showSection(sectionId) {
+      document.querySelectorAll('.form-section').forEach(function(section) {
+        section.style.display = 'none';
+      });
+
+      document.getElementById(sectionId).style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>Car Rental</h1>
+  </header>
+
+  
+
+  <section id="booking" class="form-section">
+    <div class="form-buttons">
+      <form action="booking.html" method="get">
+        <input type="submit" value="Booking">
+      </form>
+      <form action="contact.html" method="get">
+        <input type="submit" value="Contact">
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Car Rental</p>
+  </footer>
+
+  <!-- Add your image source in the src attribute -->
+  <img class="corner-image" src="car.png" alt="Corner Image">
+
+</body>
+</html>
